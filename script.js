@@ -32,13 +32,10 @@ async function getQuotes() {
 getQuotes();
 
 const getOneQuote = () => {
-  loading();
   const quote =
     apiQuotes.quotes[Math.floor(Math.random() * apiQuotes.quotes.length)];
   authorText.textContent = quote.author;
   quoteText.textContent = quote.quote;
-  setTimeout(complete, 1000);
-  console.log(quote);
 };
 
 const tweetQuote = () => {
